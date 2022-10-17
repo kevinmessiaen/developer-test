@@ -1,0 +1,9 @@
+# Hibernate properties
+spring:
+  jpa:
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+  main:
+    banner-mode: off
+logging:
+  level:
+    root: WARN

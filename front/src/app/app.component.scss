@@ -1,0 +1,25 @@
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    text-align: center;
+    margin: 16px;
+  }
+}
+
+.drag-card {
+  max-width: 400px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 0.83;
+  margin-bottom: 15px;
+  text-align: start;
+}

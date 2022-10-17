@@ -1,0 +1,7 @@
+# Hibernate properties
+spring:
+  jpa:
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+millennium-falcon:
+  location: ${MILLENNIUM_FALCON_LOCATION:./data/millennium-falcon.json}
+    

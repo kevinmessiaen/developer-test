@@ -1,0 +1,27 @@
+<section class="container">
+  <h1>Ask C3PO to analyze your probability to succeed</h1>
+  <input type="file"
+         #file
+         [multiple]="false"
+         (change)="onFileChange($event)"
+         accept="application/json"
+         style="display:none" />
+  <mat-card appDrag (files)="uploadFile($event)" class="drag-card">
+    <mat-card-title>Hand the intercepted communication to C3P0</mat-card-title>
+    <img mat-card-image src="./assets/C3P0.jpg" alt="Photo of C3P0">
+    <mat-card-actions align="end">
+      <button mat-button (click)="file.click()" color="primary">OR GIVE HIM THE FILE LOCATION</button>
+    </mat-card-actions>
+  </mat-card>
+  <div class="alert" *ngIf="error">
+    The Millennium Falcon onboard computer could not process the file:<br />
+    {{error}}
+  </div>
+  <div *ngIf="loading || odds">
+    <mat-progress-bar [mode]="loading ? 'indeterminate' : 'determinate'" [value]="odds"></mat-progress-bar>
+    <h2 *ngIf="odds">
+      The crew have {{ (odds / 100) | percent }} to succeed
+    </h2>
+  </div>
+</section>
+
